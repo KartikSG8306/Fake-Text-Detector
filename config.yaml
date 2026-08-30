@@ -1,0 +1,11 @@
+model_name: "distilroberta-base"
+dataset_name: "Hello-SimpleAI/HC3"
+dataset_subset: "all"
+max_length: 256
+batch_size: 8
+gradient_accumulation_steps: 2
+learning_rate: 2e-5
+num_epochs: 3
+fp16: true
+output_dir: "models/saved_model"
+seed: 42

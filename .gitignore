@@ -1,0 +1,30 @@
+# Data directories
+data/raw/
+data/processed/
+
+# Saved model artifacts
+models/saved_model/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environment
+venv/
+.venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Results (optional — remove this line if you want to track results in git)
+# results/
