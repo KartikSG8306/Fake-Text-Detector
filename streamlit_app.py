@@ -53,6 +53,9 @@ def load_model():
     """Load the fine-tuned model and tokenizer (cached in memory)."""
     config = load_config()
     model_dir = os.path.join(PROJECT_ROOT, config["output_dir"])
+# If local model doesn't exist (e.g., on Streamlit Cloud), load from HuggingFace
+    if not os.path.exists(os.path.join(model_dir, "config.json")):
+        model_dir = "Jhonwick83/Jhonwick83"
 
     tokenizer = AutoTokenizer.from_pretrained(model_dir)
     model = AutoModelForSequenceClassification.from_pretrained(model_dir)
